@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="">
+    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="add: terminal 내용추가">
+      <change afterPath="$PROJECT_DIR$/createProject_ETC/getStart.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/createProject_ETC/terminal.md" beforeDir="false" afterPath="$PROJECT_DIR$/createProject_ETC/terminal.md" afterDir="false" />
     </list>
@@ -77,8 +78,17 @@
       <workItem from="1668758506736" duration="6922000" />
       <workItem from="1668776597938" duration="5089000" />
       <workItem from="1668842979621" duration="671000" />
-      <workItem from="1668846552119" duration="361000" />
+      <workItem from="1668846552119" duration="819000" />
+      <workItem from="1668847375553" duration="3844000" />
     </task>
+    <task id="LOCAL-00001" summary="add: terminal 내용추가">
+      <created>1668847197254</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668847197254</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +104,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add: terminal 내용추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: terminal 내용추가" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

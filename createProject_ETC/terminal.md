@@ -1,3 +1,6 @@
+# 터미널 명령어 정리
+
+
 ### ls (list)
 - 현재 경로에 있는 파일/폴더 확인하기
 
@@ -15,6 +18,10 @@
 `cd` : Desktop 폴더 밖으로 이동하는 cd<br>
 `~ pwd` : pwd 하면? <br>
 `/Uers/jass` : 이동된 경로 보여준다! <br>
+
+***
+### mkdir (make directory)
+- 새로운 폴더 생성
 
 ***
 ### rmdir (remove directory)
