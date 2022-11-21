@@ -544,7 +544,7 @@ console.log(Array.from('◎').length);
 
 
 /*
-22.11.18.fri (063~ )
+22.11.18.fri (063~ 063)
  */
 
 
@@ -569,9 +569,70 @@ console.log(targetString3);
 const trimmedString3 = targetString3.trim();
 console.log(trimmedString3);
 
+
+
+/*
+22.11.19.sat (064~ 067)
+ */
+
+
 //29.문자열 검색하기(인덱스 검색)
 //원하는 문자열의 위치를 확인하고 싶을 때
 //문자열시작인덱스: 대상문자열.indexOf(검색대상문자열, [검색시작인덱스(생략가능)]) //반환:숫자
 //문자열종료인덱스: 대상문자열.lastIndexOf(검색대상문자열, [검색시작인덱스(생략가능)])
 //정규표현일치인덱스: 대상문자열.search(정규표현)
-const myString = ''
+
+const myStrings = '자바스크립트를 알자 ABCD';
+
+const a1 = myStrings.indexOf('자바스크립트');
+console.log(a1);
+const a2 = myStrings.indexOf('알자');
+console.log(a2);
+const a3 = myStrings.indexOf('크');
+console.log(a3);
+const a4 = myStrings.indexOf('HTML');
+console.log(a4);                //결과: -1 지정문자열이 존재하지 않음
+const a5 = myStrings.indexOf('b');
+console.log(a5);                //결과: -1 대소문자구분
+
+
+//30.문자열검색하기(부분검색)
+// 지정 문자열의 포함 여부를 확인하고 싶을 때, 입력폼의 부적절한 문자를 체크하고 싶을 때
+// 반환은 boolean값
+// includes() : 문자열 포함 여부 확인
+// startsWith() : 문자열 시작 문자 확인
+// endsWith() : 문자열 종료 문자 확인
+
+const myString2 = 'JavaScript를 배우자';
+
+// const aa1 = 'JavaScript를 배우자'.includes('JavaScript');
+const aa1 = myString2.includes('JavaScript');
+console.log(aa1);
+const aa2 = 'JavaScript를 배우자'.startsWith('배우자');
+console.log(aa2);
+const aa3 = 'JavaScript를 배우자'.endsWith('배우자');
+console.log(aa3);
+// indexOf()는 지정 문자열의 인덱스를 반환
+// includes()는 지정 문자열의 포함 여부를 반환
+
+
+
+/*
+22.11.21.mon (068~ )
+ */
+
+//31. 문자열에서 문자 다루기(문자열에서 문자 추출하기)
+//지정한 위치의 문자를 추출하고 싶을 때
+// 문자열.charAt([인덱스(생략가능)]) -> 반환: 문자
+//문자열에서 원하는 부분만을 추출할 때 사용한다. charAt()는 지정한 인덱스 위치의 문자를 반환.
+
+const charIndex = 'JavaScript';
+
+const charThree = charIndex.charAt(3);
+console.log(charThree);
+const charZero = charIndex.charAt();
+console.log(charZero);
+
+<header>
+    <label></label>
+</header>
