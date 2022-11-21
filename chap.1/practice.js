@@ -618,7 +618,7 @@ console.log(aa3);
 
 
 /*
-22.11.21.mon (068~ )
+22.11.21.mon (068~ 080)
  */
 
 //31. 문자열에서 문자 다루기(문자열에서 문자 추출하기)
@@ -633,6 +633,105 @@ console.log(charThree);
 const charZero = charIndex.charAt();
 console.log(charZero);
 
-<header>
-    <label></label>
-</header>
+// [Task] p69~70 convert html/JavaScript to React
+
+//32.문자열 다루기(위치 지정하여 선택하기)
+//지정 범위 내의 문자열을 추출하여 사용하고 싶을 때
+//지정 위치 이후의 문자열을 추출하여 사용하고 싶을 때
+//문자열.slice(시작인덱스, [종료인덱스(생략가능)]) => 반환: 문자열
+//문자열.substring(시작인덱스, [종료인덱스(생략가능)]) => 반환: 문자열
+// 지정한 문자열의 일부를 추출하고 싶을 때 slice(), substring()을 사용한다. 지정한 인덱스의 시작지점부터 종료지점까지 문자열을 추출하며, 종료 인덱스를 생략하면 범위는 문자열의 끝까지로 지정된다. 지정한 위치 이후의 문자열을 모두 추출하거나 시작과 종료 인덱스를 지정하여 추출할 때 사용.
+
+const iindex = 'JavaScript';
+
+const ak = iindex.slice(0, 4);
+console.log(ak);
+const bk = iindex.slice(0);
+console.log(bk);
+const ck = iindex.substring(0, 4);
+console.log(ck);
+const dk = iindex.substring(0);
+console.log(dk);
+//slice() 인수는 : 음의 정수도 가능. 음의 정수는 뒤에서부터 문자열을 추출하며 시작 인덱스는 -1이다.
+const ek = iindex.slice(-2);
+console.log(ek);
+const fk = iindex.slice(-2, -1);
+console.log(fk);
+//substring()는 음의 정수를 모두 0으로 간주, 뒤에서부터 문자열의 인덱스를 지정하는 음의 정수를 사용할 수 없다.
+//slice()와 substring()은 비슷하지만, 시작인덱스가 종료인덱스보다 클 때 처리방식이 다르다. substring()은 시작값이 종료값보다 클 경우 두 인덱스를 바꿔 작업을 처리한다.
+const gk = iindex.slice(5, 1);
+console.log(gk);
+const hk = iindex.substring(5, 1);
+console.log(hk);
+
+//33.문자열다루기 (글자수 지정하여 선택하기)
+//위치와 글자수를 지정한 문자열을 추출하고 싶을때
+//문자열.substr(시작인덱스, [글자수(생략가능)]) => 반환: 문자열
+//substr()은 두번째 인수에 추출하고 싶은 글자수를 지정한다. 인덱스위치와 글자수를 지정하여 필요한 위치부터 원하는 길이만큼의 문자열을 추출함.
+
+//const iindex = 'JavaScript';
+const ah = iindex.substr(4, 6);
+console.log(ah);
+// es5문법. Deprecated
+
+//34.지정문자열 변환하기
+// 문자열을 다른 문자열로 바꿀때
+// 문자열 내 불필요한 줄바꿈 코드를 <br>로 바꿀때
+// 빈칸을 제거할 떄 사용.
+// 대상문자열.replace(문자열1, 문자열2) : 문자열1을 문자열2로 바꾼다 => 반환: 문자열
+// 대상문자열.replace(정규표현, 문자열) : 정규표현으로 문자열 바꾸기 => 반환: 문자열
+
+const imgName = 'image1.png';
+
+const img = imgName.replace('1.png', '2.png');
+console.log(img);
+
+const inputText = 'lolo\npopo';
+console.log(inputText);
+const input = inputText.replace('\n', '');
+console.log(input);
+
+const phoneNumber = '010-2939-4839';
+
+const phone = phoneNumber.replace('-', '^');
+console.log(phone);
+//정규표현을 사용하여 g옵션을 지정하면
+const phone1 = phoneNumber.replace(/-/g, '^');
+console.log(phone1);
+/// g옵션 -> global?? g옵션은 '' 안됨 //해야함
+
+
+//35. 문자열나누기
+//URL의 해시hash 데이터를 가져올때
+//공백을 기준으로 문자열을 나눌때
+// 문자열.split([기준문자(생략)], [최대분할수(생략)])
+// 문자열.split([정규표현(생략)], [최대분할수(생략)])
+//split()은 첫번째인수로 구분된 배열을 반환한다.
+
+const myUrl = 'http://example.com/?id=123456789&name=Tiger&age=37';
+
+const maiUrl = myUrl.split('&');
+console.log(maiUrl);
+
+// http://example.com/ ? id=123456789 & name=Tiger & age=37
+const maUrl = myUrl.split(/&|\?/);
+console.log(maUrl);
+
+// const iindex = 'JavaScript';
+const nnb = iindex.split('');
+console.log(nnb);       // ['J', 'a', 'v', 'a', 'S', 'c', 'r', 'i', 'p', 't']
+const nmm = iindex.split();
+console.log(nmm);       // [ 'JavaScript' ]
+
+
+//36.문자열합치기
+// 따로입력받은 성과 이름결합하여 문자열 만들때
+// 폴더명과 파일명 결합하여 파일주소를 문자열로 만들때
+// 문자열1 + 문자열2 + 문자열3 + .... : 문자열1에 문자열2와 문자열3을 결합
+//  `${문자열1}${문자열2}${문자열3}` : 문자열1,2,3을 결합
+
+const country = 'Korea, ';
+const states = 'Seoul';
+console.log( country + states );
+
+const
