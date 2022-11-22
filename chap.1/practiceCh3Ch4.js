@@ -148,19 +148,16 @@ const fruitStore = [
 
 //map() : array 안의 배열들 호출하고 제공된 조건의 새로운 배열로 할당
 const numbers1 = [1, 2, 3, 4]
-
 const a = numbers1.map(value => value < 3)
 console.log(a); //[true, true, false, false]
 
 //filter() : array 안의 배열들을 호출하고 조건에 맞는 값들만 새로운 array로 할당
 const numbers2 = [1, 2, 3, 4, 5]
-
 const uyo = numbers2.filter(numbers2 => numbers2 < 4);
 console.log(uyo); //[1, 2, 3]
 
 //find() : 조건에 맞는 첫번째값을 찾아서 리턴
 const numbers3 = [1, 2, 3, 4, 5, 6, 7]
-
 const yer = numbers3.find(numbers3 => numbers3 > 4);
 console.log(yer); // 5
 const ewu = numbers3.find(numbers3 => numbers3 < 6);
