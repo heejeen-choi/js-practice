@@ -166,6 +166,7 @@ console.log(yer); // 5
 const ewu = numbers3.find(numbers3 => numbers3 < 6);
 console.log(ewu); // 1
 
+
 //findIndex() : 조건에 맞는 첫번째값의 index값을 리턴
 const numbers4 = [1, 2, 3, 0, 4, 9, 10]
 const sfe = numbers4.findIndex(numbers4 => numbers4 < 4);

@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="feat: 81까지">
-      <change afterPath="$PROJECT_DIR$/chap.1/practiceCh3Ch4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap.1/practice.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.1/practiceCh1Ch2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createProject_ETC/recipeIndex.md" beforeDir="false" afterPath="$PROJECT_DIR$/createProject_ETC/recipeIndex.md" afterDir="false" />
+    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="feat: chap3시작, line169~179 해결안된것 있음">
+      <change beforePath="$PROJECT_DIR$/chap.1/practiceCh3Ch4.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.1/practiceCh3Ch4.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +82,7 @@
       <workItem from="1668847375553" duration="7691000" />
       <workItem from="1669023434970" duration="19909000" />
       <workItem from="1669093594051" duration="4067000" />
-      <workItem from="1669098496127" duration="5467000" />
+      <workItem from="1669098496127" duration="5783000" />
     </task>
     <task id="LOCAL-00001" summary="add: terminal 내용추가">
       <created>1668847197254</created>
@@ -115,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669038281661</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: chap3시작, line169~179 해결안된것 있음">
+      <created>1669104246670</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669104246670</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +141,8 @@
     <MESSAGE value="feat: 프로젝트 생성" />
     <MESSAGE value="feat: ReactComponent 만들기" />
     <MESSAGE value="feat: 81까지" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 81까지" />
+    <MESSAGE value="feat: chap3시작, line169~179 해결안된것 있음" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: chap3시작, line169~179 해결안된것 있음" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
