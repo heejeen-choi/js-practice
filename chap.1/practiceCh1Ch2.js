@@ -1,5 +1,5 @@
 /*
-22.11.13.sun (007~ 013)
+ *********************** 22.11.13.sun (007~ 013)
  */
 
 const a = 10;
@@ -22,7 +22,7 @@ console.log(402 % 5);
 console.log(2 ** 3);
 
 /*
-22.11.14.mon (014~ 023)
+ *********************** 22.11.14.mon (014~ 023)
  */
 
 let myName = 'jPub';
@@ -116,7 +116,7 @@ console.log(20 !== '20');
 
 
 /*
-22.11.15.tue (024~ 035)
+ *********************** 22.11.15.tue (024~ 035)
  */
 
 //10.복합형/축약형 대입연산자 사용
@@ -339,7 +339,7 @@ reMyPrice3 = (a) => {
     }
 };
 const result1 = reMyPrice3(54);
-console.log(result1); //reMyPrice3는 50 이상. ------------------------ K.Answer
+console.log(result1); //reMyPrice3는 50 이상. ------------------------ A.
 
 
 if (true) {
@@ -357,7 +357,7 @@ if (randomNum >= 5) {
 
 
 /*
-22.11.16.wed (035~ 051)
+ *********************** 22.11.16.wed (035~ 051)
  */
 
 //16.조건문사용하기 (switch)
@@ -466,7 +466,7 @@ if (userName1) {
 const address = '바다';
 if (address) {
     console.log(`당신은 ${address}에 살고 계시네요`);
-};
+}
 const beauty = '하늘';
 if (beauty) {
     console.log(`${beauty}은 아름다워요.`);
@@ -498,9 +498,11 @@ console.log(Math.trunc(6.23));
 
 
 
+
 /*
-22.11.17.thur (052~ 062)
+ *********************** 22.11.17.thur (052~ 062)
  */
+
 
 //23.임의의 수 다루기
 Math.random();
@@ -543,8 +545,9 @@ console.log(Array.from('◎').length);
 
 
 
+
 /*
-22.11.18.fri (063~ 063)
+ *********************** 22.11.18.fri (063~ 063)
  */
 
 
@@ -572,7 +575,7 @@ console.log(trimmedString3);
 
 
 /*
-22.11.19.sat (064~ 067)
+ *********************** 22.11.19.sat (064~ 067)
  */
 
 
@@ -618,7 +621,7 @@ console.log(aa3);
 
 
 /*
-22.11.21.mon (068~ 080)
+ *********************** 22.11.21.mon (068~ 080)
  */
 
 //31. 문자열에서 문자 다루기(문자열에서 문자 추출하기)
@@ -734,4 +737,57 @@ const country = 'Korea, ';
 const states = 'Seoul';
 console.log( country + states );
 
-const
+
+
+/*
+ *********************** 22.11.22.tue (083~ ch3.계속)
+ */
+
+
+//37.문자열의 대소문자 변환하기
+//소문자를 대문자로 변환
+//서버에서 반환된 대문자 데이터를 소문자로 변환할때
+// 문자열.toLowerCase() : 문자열을 소문자로 변환 : 문자열반환
+// 문자열.toUpperCase() : 문자열을 대문자로 변환 : 문자열반환
+
+const teest = 'TeSt';
+
+const test1 = teest.toLowerCase();
+console.log(test1);
+
+const hisName = 'john smith';
+
+const test2 = hisName.toUpperCase();
+console.log(test2);
+
+//38.문자열과 식 함께 다루기
+//여러 문자열을 다루고 싶을때
+//문자열 내 변수를 다루고 싶을 때
+// 문자열 + 문자열 + ... : 문자열 결합
+// `${문자열1}${문자열2}${문자열3}` : 문자열 결합, 변수의 이용
+//자바스크립트에서는 ' + ' 연산자를 문자열, 변수와 함께 사용할 수 있다.
+
+const userName = `고양이`;
+
+const tag = '<div class="container">' + '안녕하세요' + userName + '님' + '</div>';
+console.log(tag);
+
+const userName2 = '고양2';
+
+const tag1 = `<div class="constainer">안녕하세요 ${userName2} 님</div>`;
+console.log(tag1);
+
+//39.정규표현식사용하기
+
+// if (/iphone|ipod|iPad/.test(navigator.userAgent)) {
+//     alert('iOS');
+// }
+//
+// if (
+//     navigator.userAgent.includes('iPhone') ||
+//     navigator.userAgent.includes('iPod') ||
+//     navigator.userAgent.includes('iPad')
+// ) {
+//     alert('iOS');
+// }
+
