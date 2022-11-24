@@ -2,7 +2,7 @@
 
 
 /*
- *********************** 22.11.22.tue (p102 ~ )
+ ********************************************************************* 22.11.22.tue (p102 ~ p107)
  */
 
 
@@ -69,7 +69,7 @@ console.log(array12.length);
 
 //47.배열요소 다루기(1)
 //배열 요소의 데이터를 처리할때
-//배열.forEach(콜백함수) : 배열의 요소 데이터 콜백함수로 실행
+// (1) 배열.forEach(콜백함수) : 배열의 요소 데이터 콜백함수로 실행
 //([요소(생략)], [인덱스(생략)], [기존배열(생략)]) => {} : 요소, 인덱스, 기존배열을 사용해서 처리
 // 요소 value | 인덱스 index | 기존배열 array
 
@@ -175,4 +175,142 @@ const igi = transports.findIndex(transport => /^b/.test(transport));
 // (2) .test() <- 이 함수 뭔지?
 // (3) 조건에 맞는 첫번째값 뿐만 아니라 모든 값의 index 또는 value값을 리턴하려면 어떻게 해야하는지??c
 console.log(igi);
+
+
+
+
+/*
+ ********************************************************************* 22.11.22.wed (p108~ 113)
+ */
+
+
+//48.배열요소다루기(2)
+//배열의 각 요소 데이터를 처리할때
+//배열의 루프처리(반복) 중 요소의 인덱스가 불필요할때
+
+// (2) for (const 요소 of 배열) {} : for ... of 루프처리
+//배열은 Iterable 객체이므로 for ... of문의 처리가 가능하다.
+
+const array16 = ['red', 'yellow', 'green'];
+for (const value of array16) {
+    console.log(value);
+}
+
+
+//49.배열요소다루기(3)
+//배열의 각 요소 데이터를 처리할 때
+//배열의 루프처리(반복) 중 요소의 인덱스가 불필요할때
+
+// (3) for (let i=0; i<배열길이; i++) {} : for ... of 루프처리
+
+const array17 = ['skyBlue', 'beige', 'grey', 'darkOrange'];
+const arrayLength = array17.length;
+for (let i=0; i<arrayLength; i++) {
+    console.log(array17[i]);
+}
+
+
+//50.배열요소 추가하기
+//배열에 요소를 추가할 때
+//요소를 배열의 처음 혹은 마지막 부분에 추가할때
+//배열.unshift(요소1, 요소2, ...) : 배열의 첫위치에 요소추가 : 숫자(요소 전체개수) 반환
+//배열.push(요소1, 요소2, ...)
+
+
+// ** push (AJ MSA Project)
+// (1)
+// const menuItems = (menues: Menu[]): Menu[] => {
+//     const items: Menu[] = [];
+//     menus.forEach(menu => {
+//         items.push(menu);
+//         if (menu.children) {
+//             items.push(...menuItems(menu.children));
+//         }
+//     });
+//     return items;
+// }
+//
+// (2)
+// const dates: { date: any, events: any }[] = [];
+// for (let i=0; i<42; i++) {
+//     const date = new Date(startingDate);
+//     dates.push({date: date, events: findEventsForDate(events, date)});
+//     startingDate.setDate(startingDate.getDate() + 1);
+// }
+//
+// (3)
+// const routeToForm = () => {
+//     router.push(
+//         `/activity/form`,
+//         `/activity/form`
+//     )
+// }
+
+const array18 = ['korea', 'usa'];
+array18.unshift('italy');
+console.log(array18);
+
+const array19 = ['korea', 'usa'];
+array19.push('italy', 'germany');
+console.log(array19);
+
+//51.배열요소 삭제하기
+//배열.shift() : 배열 첫위치의 요소를 삭제 : 반환=삭제된요소
+//배열.pop() : 배열 마지막 위치의 요소를 삭제 : 반환=삭제된요소
+// shift()와 pop()은 초기화 이후 배열의 요소를 삭제할떄 사용한다.
+
+const array20 = ['aa', 'bb', 'cc'];
+console.log(array20);
+const shiftedValue = array20.shift();
+console.log(shiftedValue);
+console.log(array20);
+
+const array21 = ['11', '22', '33'];
+console.log(array21);
+const popedValue = array21.pop();
+console.log(popedValue);
+console.log(array21);
+
+const array22 = [];
+console.log(array22);
+const popValue = array22.pop();
+console.log(popValue);
+console.log(array22);
+// 삭제가능 요소가 없다면 pop()와 shift()의 반환값은 undefined.
+
+//52.배열요소 부분변환하기
+//배열 내 요소를 다른 요소로 변환할때
+// 배열.splice(위치, 추출개수, 요소1, 요소2, ...) : 지정위치요소추출, 요소추가 : 반환=배열
+//splice()는 지정한 위치의 요소를 추출하고 새로운 요소를 추가한다. 위치 지정하여 요소 추가할 때 쓰임.
+
+const array23 = ['gray', 'white', 'brown', 'gold', 'metal'];
+array23.splice(1, 2, 'babyBlue');
+console.log(array23);
+
+//53.배열 결합하기
+//여러개의 배열을 하나로 결합할때
+// 배열1.concat(배열2, 배열3, ...) : 배열1에 배열2, 배열3을 결합
+// [...배열1, ...배열2, ...배열3] : 배열1에 배열2, 배열3을 결합
+//여러개의 배열을 하나의 배열로 결합할 수 있다. concat()을 사용해 인수의 배열을 결합하며, 결합하는 배열의 수는 제한이 없고 인수의 배열은 결합한 후에도 삭제되지 않는다.
+
+const array24 = ['123', '234'];
+const array25 = ['456'];
+const array26 = array24.concat(array25);
+console.log(array26);
+
+const array27 = ['carrot', 'avocado'];
+const array28 = ['melon', 'persimmon'];
+const array29 = ['tomato'];
+const array30 = array29.concat(array28, array27);
+console.log(array30);
+
+//스프레드Spread연산자(...)를 사용해 [...배열]의 형태로 배열을 선언하면 요소의 데이터가 전부 표시된 배열을 가져올 수 있다.
+const array31 = ['wer', 'rte', 12, 'dgs'];
+console.log([...array31]);
+
+const array32 = ['set', 'ger'];
+const array33 = [32, 'cdg'];
+const array34 = [...array33, ...array32];
+console.log(array34);
+
 
