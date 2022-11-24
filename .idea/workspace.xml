@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="feat: chap3시작, line169~179 해결안된것 있음, 필수index 수정(ft.창형)">
-      <change afterPath="$PROJECT_DIR$/task/unresolved.md" afterDir="false" />
+    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="feat: chap3(~113까지) {push(),concat(),Spread,for..of}">
+      <change afterPath="$PROJECT_DIR$/chap.2/regularEx.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap.3/54_array.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap.1/practiceCh1Ch2.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.1/practiceCh1Ch2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap.1/practiceCh3Ch4.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.1/practiceCh3Ch4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap.1/practiceCh1Ch2.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.2/practiceCh1Ch2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap.1/practiceCh3Ch4.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.3/45_53.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/unresolved.md" beforeDir="false" afterPath="$PROJECT_DIR$/task/unresolved.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +55,12 @@
     &quot;ts.external.directory.path&quot;: &quot;/Users/jass/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/222.4345.14/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/chap.3" />
+      <recent name="$PROJECT_DIR$/chap.2" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,7 +96,7 @@
       <workItem from="1669098496127" duration="6694000" />
       <workItem from="1669175828765" duration="2984000" />
       <workItem from="1669184901532" duration="4016000" />
-      <workItem from="1669201663710" duration="5814000" />
+      <workItem from="1669201663710" duration="30726000" />
     </task>
     <task id="LOCAL-00001" summary="add: terminal 내용추가">
       <created>1668847197254</created>
@@ -139,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669104448963</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: chap3(~113까지) {push(),concat(),Spread,for..of}">
+      <created>1669249762889</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669249762889</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +178,8 @@
     <MESSAGE value="feat: 81까지" />
     <MESSAGE value="feat: chap3시작, line169~179 해결안된것 있음" />
     <MESSAGE value="feat: chap3시작, line169~179 해결안된것 있음, 필수index 수정(ft.창형)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: chap3시작, line169~179 해결안된것 있음, 필수index 수정(ft.창형)" />
+    <MESSAGE value="feat: chap3(~113까지) {push(),concat(),Spread,for..of}" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: chap3(~113까지) {push(),concat(),Spread,for..of}" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

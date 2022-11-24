@@ -1,7 +1,7 @@
 ## 해결안된것들
 
 
-### 1. page 078 <br>
+### ~~1. page 078~~ → '정규식'
 ````
   const myUrl = 'http://example.com/?id=123456789&name=Tiger&age=37';
 ````
@@ -19,7 +19,7 @@ console.log(maUrl);
 
 => 두번째 반환값의 const maUrl 에서 `split의 인수` 이해안됨.  **/&|\?/**
 
-### 2. practiceCh3Ch4/ `line169~172`
+### ~~2. practiceCh3Ch4/ `line169~172`~~ → findIndex 보다는 filter()쓴다.
 ````
 //findIndex() : 조건에 맞는 첫번째값의 index값을 리턴
 
@@ -27,7 +27,7 @@ const numbers4 = [1, 2, 3, 0, 4, 9, 10]
 const sfe = numbers4.findIndex(numbers4 => numbers4 < 4);
 console.log(sfe);  // 이거 왜 콘솔 안찍히는지?????????
 ````
-### 3. practiceCh3Ch4/ `line174~179` 
+### ~~3. practiceCh3Ch4/ `line174~179`~~ → '정규식'
 ````
 const transports = ['car', 'train', 'bike', 'bus']
 const igi = transports.findIndex(transport => /^b/.test(transport));
@@ -62,7 +62,7 @@ for (let i=0; i<42; i++) {
     startingDate.setDate(startingDate.getDate() + 1);
 }
 
-(3)
+(3) **React Router Api Library**
 const routeToForm = () => {
     router.push(
         `/activity/form`,
@@ -71,4 +71,9 @@ const routeToForm = () => {
 }
 ````
 
-### 5.
+### 5. chap.3/54_array `line295`
+````
+person1의 배열을 object에 넣어서
+console.log(object) 했을때 
+{ id: 259455, name: 'Reduce23', age: 39 } 이렇게 나오려면 어떻게?
+````
