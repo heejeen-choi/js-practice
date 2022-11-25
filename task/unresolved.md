@@ -37,7 +37,7 @@ const igi = transports.findIndex(transport => /^b/.test(transport));
 console.log(igi);
 ````
 
-### 4. practiceCh3Ch4/ `line213`
+### ~~4. practiceCh3Ch4/ `line213`~~ → 'React Router Library'찾아보기_(3)
     - push()가 쓰인 Aj프로젝트 소스코드 3가지 예시 확인 (push는 배열에 요소를 추가하는 메소드인데?)
 ````
 ** push (AJ MSA Project)
@@ -62,7 +62,7 @@ for (let i=0; i<42; i++) {
     startingDate.setDate(startingDate.getDate() + 1);
 }
 
-(3) **React Router Api Library**
+(3) 
 const routeToForm = () => {
     router.push(
         `/activity/form`,
@@ -77,3 +77,32 @@ person1의 배열을 object에 넣어서
 console.log(object) 했을때 
 { id: 259455, name: 'Reduce23', age: 39 } 이렇게 나오려면 어떻게?
 ````
+
+### 6. chap.3/54_array_ ask SB
+```
+(1)
+const persons = [{id: 12, name: 'hj'}, {id: 24, name: 'jh'}];
+const copiedPersons = {...persons};
+console.log(copiedPersons);    // {id: 12, name: 'hj'}, {id: 24, name: 'jh'}
+const copiedPersons = {id, ...persons};
+console.log(copiedPersons);    // 0: {id: 12, name: 'hj'}, 1:{id: 24, name: 'jh'}, id: 1
+console.log(persons);      // 0: {id: 12, name: 'hj'}, 1:{id: 24, name: 'jh'}, length: 2
+```
+```
+(2)
+const personInfo = {
+    id: 11,
+    name: 'ABBA',
+    age: 23
+};
+console.log(personInfo);    // { id: 11, name: 'ABBA', age: 23 }
+personInfo.id = 3534;
+const objectPerson = {...personInfo};
+console.log(personInfo);      // { id: 3534, name: 'ABBA', age: 23 }
+console.log(objectPerson);    // { id: 3534, name: 'ABBA', age: 23 }
+const objectPerson3 = {id, ...personInfo};
+console.log(objectPerson3);     //ReferenceError: id is not defined.
+```
+![img_1.png](img_1.png)
+
+

@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="feat: chap3(~113까지) {push(),concat(),Spread,for..of}">
-      <change afterPath="$PROJECT_DIR$/chap.2/regularEx.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chap.3/54_array.js" afterDir="false" />
+    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="feat: chap3(~145까지) 배열 이어서">
+      <change afterPath="$PROJECT_DIR$/task/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task/objectQ.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap.1/practiceCh1Ch2.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.2/practiceCh1Ch2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap.1/practiceCh3Ch4.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.3/45_53.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap.3/54_array.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.3/54_array.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task/unresolved.md" beforeDir="false" afterPath="$PROJECT_DIR$/task/unresolved.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,22 +40,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jass/js-practice&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/jass/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/222.4345.14/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/jass/js-practice/task",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "ts.external.directory.path": "/Users/jass/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/222.4345.14/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/task" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/chap.3" />
       <recent name="$PROJECT_DIR$/chap.2" />
@@ -96,7 +99,10 @@
       <workItem from="1669098496127" duration="6694000" />
       <workItem from="1669175828765" duration="2984000" />
       <workItem from="1669184901532" duration="4016000" />
-      <workItem from="1669201663710" duration="30726000" />
+      <workItem from="1669201663710" duration="30846000" />
+      <workItem from="1669336475555" duration="699000" />
+      <workItem from="1669337190851" duration="315000" />
+      <workItem from="1669337514278" duration="11249000" />
     </task>
     <task id="LOCAL-00001" summary="add: terminal 내용추가">
       <created>1668847197254</created>
@@ -154,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669249762889</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: chap3(~145까지) 배열 이어서">
+      <created>1669282345063</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669282345063</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +192,8 @@
     <MESSAGE value="feat: chap3시작, line169~179 해결안된것 있음" />
     <MESSAGE value="feat: chap3시작, line169~179 해결안된것 있음, 필수index 수정(ft.창형)" />
     <MESSAGE value="feat: chap3(~113까지) {push(),concat(),Spread,for..of}" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: chap3(~113까지) {push(),concat(),Spread,for..of}" />
+    <MESSAGE value="feat: chap3(~145까지) 배열 이어서" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: chap3(~145까지) 배열 이어서" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

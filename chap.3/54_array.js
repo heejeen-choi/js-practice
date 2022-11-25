@@ -14,36 +14,42 @@ console.log(array1.join('%'));
 const array2 = ['d', 'e', 'p', 't'];
 console.log(array2.join(''));
 
-{
-    link = () => undefined;
-}:
-{ link?: () => void }
-
-
-
-type Item = {
-    text: string, link: any
-}
-type List = {
-    items: string[], description?: string
-}
-
-let a: Omit<Item & List, 'text''>;
-
-{...a}
-
-es6
-
-ts
-
-
-react
-
-
-
-if (props.link) {
-    ddd
-}
+// {
+//     link = () => undefined;
+// }
+// :
+// {
+//     link ? : () => void
+// }
+//
+//
+// type
+// Item = {
+//     text: string, link: any
+// }
+// type
+// List = {
+//     items: string[], description? : string
+// }
+//
+// let a: Omit<Item & List, 'text'
+// '>;
+//
+// {...
+//     a
+// }
+//
+// es6
+//
+// ts
+//
+//
+// react
+//
+//
+// if (props.link) {
+//     ddd
+// }
 
 //55.배열요소 검색하기
 //배열 데이터의 특정 요소를 확인할 때
@@ -55,9 +61,9 @@ if (props.link) {
 const array3 = ['mango', 'apple', 'mandarine'];
 console.log(array3.indexOf('apple'));
 
-const array4: number[] | string | null = ;//[2,4,6,2,6,3,1,8,0];
-console.log(array4.lastIndexOf(0, 5));
-console.log(array4.includes(7));
+// const array4: number[] | string | null =;//[2,4,6,2,6,3,1,8,0];
+// console.log(array4.lastIndexOf(0, 5));
+// console.log(array4.includes(7));
 
 
 //56.조건을 만족하는 배열요소 가져오기
@@ -75,7 +81,7 @@ console.log(targetIndex);
 //57.배열요소 역순 정렬하기
 //배열.reverse() : 배열을 역순으로 정렬 : 반환=배열
 
-const array7 = [1,3,5];
+const array7 = [1, 3, 5];
 const array8 = array7.reverse();
 console.log(array8);
 
@@ -253,9 +259,9 @@ console.log(newArray8);
 // let numbers = [1, 2, 3];
 // values == numbers;
 // console.log(values);
-[a,b,c] = [1,2,3];
+[a, b, c] = [1, 2, 3];
 console.log(a);
-console.log(a,b,c);
+console.log(a, b, c);
 
 //분할대입은 다음과 같이 배열 내 값의 변경이나 요소의 위치를 변경할수있다.
 const animals = ['fox', 'whale', 'squirrel', 'elephent'];
@@ -268,10 +274,10 @@ console.log(animals);
 //피셔예이츠 알고리즘
 
 //shuffle
-const ar1 = [1,2,3,4,5];
+const ar1 = [1, 2, 3, 4, 5];
 const arLength = ar1.length;
-for (let i=arLength-1; i>=0; i--) {
-    const randomIndex = Math.floor(Math.random() * (i+1));
+for (let i = arLength - 1; i >= 0; i--) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
     [ar1[i], ar1[randomIndex]] = [ar1[randomIndex], ar1[i]];
 }
 console.log(ar1);
@@ -279,7 +285,6 @@ console.log(ar1);
 // const array09 = ['fox', 1, 'whale', 9, 'squirrel', 13, 'elephent'];
 // const shuffled1 = shuffleArray(array09);
 // console.log(shuffled1);
-
 
 
 //67.다양한 데이터타입을 가진 객체 사용하기
@@ -315,24 +320,23 @@ const person1 = {
     age: 39
 };
 const object = person1;
-person1 === object    true
-
-1 === 1
-
-const object = {...person1};
-
-const { age, ...object} = person1;
-
-
-person1 === object    false
-
-const a = [1,2,3];
-const b = [...a];
-
-Object.
-
-
-console.log(person1.id);
+// person1 === object
+// true
+//
+// 1 === 1
+//
+// const object = {...person1};
+//
+// const {age, ...object} = person1;
+//
+//
+// person1 === object
+// false
+//
+// const a = [1, 2, 3];
+// const b = [...a];
+//
+// Object.console.log(person1.id);
 console.log(person1['name']);
 console.log(person1.name);
 person1.id = 259455;
@@ -345,19 +349,126 @@ console.log(object);
 
 object.id = person1.id;
 
-// const response1 = {
-//     result: true,
-//     list: [
-//         {
-//             id: '233AA',
-//             name: 'Alive-2343',
-//             age: 355
-//         },
-//         {
-//             id: '634FS',
-//             name: 'DeTsk-54',
-//             age: 46
-//         }
-//     ]
-// };
-// console.log(response1.list[0].name);
+const response1 = {
+    result: true,
+    list: [
+        {
+            id: '233AA',
+            name: 'Alive-2343',
+            age: 355
+        },
+        {
+            id: '634FS',
+            name: 'DeTsk-54',
+            age: 46
+        }
+    ]
+};
+console.log(response1.list[0].name);
+
+
+
+/*
+ ********************************************************************* 22.11.25.fri (p145~ )
+ */
+
+
+//객체의 속성은 데이터 타입이 다양한 배열과객체 등을 다차원으로 저장할 수 있다. 다차원이라도 '[키]'와 .'키'를 사용해 불러오기와 변경이 가능하다.
+//함수 타입도 저장할 수 있다.
+const myClass = {
+    method1: function () {
+        console.log('method1Execution');
+    },
+    method2: () => {
+        console.log('method2Execution');
+    }
+};
+myClass.method2();
+
+
+//69.객체복사하기
+//데이터복사할때
+// { ...복사대상객체 } : 의미=대상객체의 각요소를 분할대입(복사)
+// Object.assign((), 복사대상객체) : 반환=객체
+
+const object1 = {
+    result: true,
+    members: [
+        {
+            id: 1,
+            name: 'sfsd'
+        },
+        {
+            id: 2,
+            name: 'sgeds'
+        },
+        {
+            id: 3,
+            mame: 'iegg'
+        }
+    ]
+};
+const copiedObject1 = Object.assign({}, object1);
+console.log(copiedObject1);
+
+//spread연산자(...)를 사용하면 코드가 간략해짐.
+const object2 = {
+    result: true,
+    members: [
+        {
+            id: 393,
+            name: 'sdaf-df'
+        },
+        {
+            id: 1324,
+            name: 'fie-fg'
+        },
+        {
+            id: 949,
+            name: 'idd-dfb'
+        }
+    ]
+};
+const copiedObject2 = {...object2};
+console.log(copiedObject2);
+// Object.assign()과 spread연산자'...'를 사용하면 얕은 복사가 이루어진다.
+// 얕은복사 : 복사 전 데이터와 복사 후의 데이터가 같은 곳을 참조하는 것 => 복사 전의 데이터를 수정하면 복사 후의 데이터에도 영향을 미친다.
+
+//얕은 복사의 특징 ↓
+const object3 = {
+    id: 78,
+    members: ['boobie', 'oOowo', 'gakuwa']
+};
+const copiedObject3 = {...object3};
+object3.members[1] = 'danaka-sang';
+object3.id = 9087;
+console.log(copiedObject3);
+
+// const copiedObject3 = {id, ...object3};
+// console.log(copiedObject3);
+
+// const object = {...person1};
+//
+// const {age, ...object} = person1;
+
+const personInfo = {
+    id: 11,
+    name: 'ABBA',
+    age: 23
+};
+console.log(personInfo);
+// const objectPerson = {...personInfo};
+// console.log(objectPerson);
+personInfo.id = 3534;
+const objectPerson = {...personInfo};
+console.log(personInfo);
+console.log(objectPerson);
+// const objectPerson3 = {id, ...personInfo};
+// console.log(objectPerson3);
+
+
+//70.객체속성Property 확인하기
+//Api Response의 특정 데이터를 확인할때
+//지정한 데이터가 객체에 존재하지 않아서 처리작업을 취소할때
+//객체.hasOwnProperty(키) : 의미=데이터유무 확인 : 반환=진릿값
+//키 in 객체 : 데이터의 유무여부 반환
