@@ -369,7 +369,7 @@ console.log(response1.list[0].name);
 
 
 /*
- ********************************************************************* 22.11.25.fri (p145~ )
+ ********************************************************************* 22.11.25.fri (p145~ 155)
  */
 
 
@@ -472,3 +472,94 @@ console.log(objectPerson);
 //지정한 데이터가 객체에 존재하지 않아서 처리작업을 취소할때
 //객체.hasOwnProperty(키) : 의미=데이터유무 확인 : 반환=진릿값
 //키 in 객체 : 데이터의 유무여부 반환
+const userData = {
+    id: 1,
+    name: 'dd',
+    age: 43
+};
+console.log(userData.hasOwnProperty('id'));         //true
+console.log(userData.hasOwnProperty('address'));    //false
+console.log('id' in userData);                        //true
+console.log(userData.hasOwnProperty('id', 'name'));     //true
+console.log(userData.hasOwnProperty('id' && 'address'));    //false
+console.log(userData.hasOwnProperty('address' && 'id'));    //true
+console.log(userData.hasOwnProperty('address' || 'name'));  //false
+console.log(userData.hasOwnProperty('id' || 'favMeal')); //true
+
+//객체의 데이터를 가져와 undefined나 null의 여부를 확인하기
+const userData1 = {
+    id: 34,
+    age: 834,
+    fav: 'inMyHome'
+};
+console.log(userData.id != null);    //true
+console.log(userData.address != null);  //false
+console.log(userData['id'] != null);   //true
+console.log(userData.id === undefined);  //false
+
+
+//70.객체요소값 확인하기
+//Object.keys(객체) : 객체 각 키의 배열 : 반환=배열
+//Object.values(객체) : 객체 각 데이터의 배열 : 반환=배열
+//Object.entries(객체) : 객체 각 속성(Key,Value)의 배열 : 반환=배열
+
+//객체 각 속성Property의 루프처리방법
+const userData2 = {
+    id: 1,
+    name: 'dd',
+    age: 43
+};
+console.log(Object.keys(userData2));
+console.log(Object.values(userData2));
+console.log(Object.entries(userData2));
+
+
+//71.객체요소 분할대입하기(비구조화할당)
+//객체의 데이터를 정리하여 대입할때
+//객체의 일부 데이터를 추출하여 사용할때
+//{변수1,변수2,...}=객체 : 의미=객체의 데이터를 각 변수에 대입
+//객체에서 변수1, 변수2같은 이름의 키 데이터를 추출하여 변수에 대입하는 분할 대입
+
+const userData3 = {
+    id: 1,
+    name: 'dd',
+    age: 43,
+    birth: ''
+};
+const { id, name, age, birth, address } = userData3;
+console.log(id);
+console.log(name);
+console.log(age);
+console.log(birth);  // 아무것도 안찍힘
+console.log(address);   //undefined
+const { name: myName } = userData3;
+console.log(myName);    //dd
+console.log(Object.keys(userData3));  // ['id', 'name', 'age', 'birth']
+console.log(userData3.myName);   // undefined
+
+
+//73.객체수정 제한하기
+//객체의 깊은 계층까지 수정을 제한하고 싶을때
+//Object.freeze(객체) : 객체의 수정을 제한 : 반환=객체
+//Object.isFrozen(객체) : 객체의 수정 제한 확인 : 반환=진릿값
+//객체는 const도 속성의 추가,삭제,변경이 가능하다.
+
+const object11 = {
+    id: 10,
+    name: 'dsf'
+};
+object11.id = 12;
+object11.address = 'mars';
+console.log(object11);
+
+'use strict';
+const object12 = {
+    id: 343,
+    name: 'ADF'
+};
+Object.id = 12;
+console.log(object12);
+
+//객체수정을 제한하는 다른 방법
+//객체의 수정을 제한하는 다른 메소드는
+// Object.seal(), Object.preventExtensions() 가 있다.
