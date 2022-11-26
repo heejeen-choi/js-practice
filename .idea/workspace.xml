@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="feat: chap3,4 Array &amp; Data">
+    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="feat: chap6">
+      <change afterPath="$PROJECT_DIR$/chap.7/113_eventRun.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chap.6/94_browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.6/94_browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task/unresolved.md" beforeDir="false" afterPath="$PROJECT_DIR$/task/unresolved.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +102,8 @@
       <workItem from="1669337514278" duration="11368000" />
       <workItem from="1669351366709" duration="11435000" />
       <workItem from="1669363689319" duration="5041000" />
-      <workItem from="1669376342009" duration="6570000" />
+      <workItem from="1669376342009" duration="20463000" />
+      <workItem from="1669450418762" duration="57000" />
     </task>
     <task id="LOCAL-00001" summary="add: terminal 내용추가">
       <created>1668847197254</created>
@@ -181,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669381048907</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: chap6">
+      <created>1669435606176</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669435606176</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +217,8 @@
     <MESSAGE value="feat: chap3(~145까지) 배열 이어서" />
     <MESSAGE value="feat: chap3 object질문 png이미지소스 저장" />
     <MESSAGE value="feat: chap3,4 Array &amp; Data" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: chap3,4 Array &amp; Data" />
+    <MESSAGE value="feat: chap6" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: chap6" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
