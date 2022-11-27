@@ -144,4 +144,64 @@ console.log(g);         //(4)[100,2,3]출력. '[1,2,3]이 아님'
 ### 8. 
 - chap6 / p203 윈도우사이즈 확인하기 => ??
 
+### 9. chap.13 `line 196~229`
+```
+Promise.resolve()
+.then(() => new Promise((resolve) => {
+    setTimeout(() => {
+        console.log('첫번째 Promise', new Date().toLocaleTimeString());
+        resolve();
+    }, 1000);
+}))
+.then(() => new Promise((resolve) => {
+    setTimeout(() => {
+        console.log('두번째 Promise', new Date().toLocaleTimeString());
+        resolve();
+    }, 1000);
+}));
 
+//await 과 async 를 사용해서 나타내기
+start();
+async function start() {
+    await new Promise((resolve) => {
+        setTimeout(() => {
+            console.log('첫번째 Promise', new Date().toLocaleTimeString());
+            resolve();
+        }, 1000);
+    });
+    await new Promise((resolve) => {
+        setTimeout(() => {
+            console.log('두번째 Promise', new Date().toLocaleTimeString());
+            resolve();
+        }, 1000);
+    });
+}
+```
+### 10. Promise는 인스턴스화한 순간 함수가 실행되므로, 실행 직전까지 인스턴스화하지 않는 것이 핵심.
+```
+//배열생성
+const listFunctions = [];
+//동적으로 함수추가
+for (let i=0; i<5; i++) {
+    //1초 후 처리하는 비동기함수 생성
+    const func = (resolve) => {
+        //setTimeout으로 지연작업 처리
+        setTimeout(() => {
+            console.log(`함수 ${i}가 완료되었습니다.`, new Date().toLocaleTimeString());
+            resolve();  //Promise완료
+        }, 1000);
+    };
+    //배열에 보관
+    listFunctions.push(func);
+}
+//배열내용 출력
+console.log(listFunctions);
+execute();
+async function execute() {
+    //비동기처리 순서대로 실행
+    for (let i=0; i<listFunctions.length; i++) {
+        const func = listFunctions[i];
+        await new Promis(func);
+    }
+}
+```
