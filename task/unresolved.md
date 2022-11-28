@@ -205,3 +205,22 @@ async function execute() {
     }
 }
 ```
+
+### 11. chap15 `line81`
+```
+ cookieItems.forEach((item) => {
+        // '='으로 분리
+        const elem = item.split('=');
+        
+        // 키 가져오기
+        //chap.2 line554
+        //28.문자열의 공백 처리하기 (trim)
+        //문자열 양단의 공백제거 : 문자열.trim()
+        // 'trimming' trim()은 양단의 공백을 제거한 문자열을 반환한다.
+        //공백 = 스페이스,탭,줄바꿈문자를 의미. 양단아닌 문자열사이공백은 제거안됨.
+        const key = elem[0].trim();
+        
+        //
+    })
+```
+=> trim()은 공백처리메소드인데 키를 가져와서 공백은 왜 제거해야하는지?

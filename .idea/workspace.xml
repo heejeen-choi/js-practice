@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="feat: chap9.form">
-      <change afterPath="$PROJECT_DIR$/.idea/saveactions_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chap.13/219_timingControl_promise.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chap.14/228_jsonFetch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chap.15/244_localData.js" afterDir="false" />
+    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="feat: chap14 Json">
+      <change afterPath="$PROJECT_DIR$/chap.17/251_debug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chap.18/259_functionClass.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap.3/54_array.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.3/54_arrayMapFilter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap.15/244_localData.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.15/244_localData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task/unresolved.md" beforeDir="false" afterPath="$PROJECT_DIR$/task/unresolved.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,22 +39,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/jass/js-practice/task",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.saveactions",
-    "ts.external.directory.path": "/Users/jass/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/222.4345.14/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jass/js-practice/task&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.saveactions&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/jass/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/222.4345.14/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/task" />
@@ -110,7 +107,8 @@
       <workItem from="1669363689319" duration="5041000" />
       <workItem from="1669376342009" duration="20463000" />
       <workItem from="1669450418762" duration="19127000" />
-      <workItem from="1669530842715" duration="4932000" />
+      <workItem from="1669530842715" duration="5032000" />
+      <workItem from="1669601217163" duration="19228000" />
     </task>
     <task id="LOCAL-00001" summary="add: terminal 내용추가">
       <created>1668847197254</created>
@@ -210,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669455435810</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat: chap14 Json">
+      <created>1669538046575</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669538046575</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +246,8 @@
     <MESSAGE value="feat: chap6" />
     <MESSAGE value="feat: chap7. event Run" />
     <MESSAGE value="feat: chap9.form" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: chap9.form" />
+    <MESSAGE value="feat: chap14 Json" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: chap14 Json" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
