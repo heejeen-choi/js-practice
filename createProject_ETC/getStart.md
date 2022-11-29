@@ -61,14 +61,30 @@
 - eslint & prettier typescript 버전으로 설치하기
 - typeScript를 사용하는 create-react-app을 어떻게 생성?
 - typeScript로 만든 create-react-app을 eslint와 prettier 설정은 어떻게?
-- typeScripte로 만든 create-react-app은 github와 pages에 어떻게 배포?
+- typeScript로 만든 create-react-app은 github와 pages에 어떻게 배포?
+
 1. TypeScript create-react-app 생성
-   - npx create-react-app 프로젝트명 -template typescript
-   - npm i --save react react-dom typescript
-   - npm i --save-dev @types/react @types/react-dom @types/node
+   - 참고 : npx 와 npm의 차이
+     - npm 자체로 단순히 패키지를 실행하지 않는다. npm으로 패키지를 실행하려면 package.json에서 해당 패키지를 지정해야함. package.json파일을 편집하고 해당 script 섹션에서 해당 패키지 추가 하고 npm run-script 또는 npm run 사용하여 스크립트를 실행.
+     - npx는 이전에 설치되지 않은 패키지를 실행할 수 있다. npx create-react-app 프로젝트명 을 실행하면 명령이 실행 된 경로 내에 react 앱 상용구를 생성하고 사용하려할떄마다 업그레이트할 필요없이 항상 최신 버전의 생성기 또는 빌드 사용됨. npx는 node.js 패키지를 실행하는 도구이다.
+   - (1) terminal 창에서 프로젝트 생성할 디렉토리경로가 지정된 상태에서 : npx create-react-app 프로젝트명 -template typescript
+     - 명령어 실행하고 설치가 완료되면, added n packages in xm 어쩌구 몇개 패키지 설치 됐다고 npm fund 실행 어쩌고 removed 한개 패키지 어쩌구 하면서
+       Success! 생성되었다 니 프로젝트가 어디 경로에  밑에 이어서 npm start, npm run build, npm run eject, npm test, cd 프로젝트명 npm start 나오고 마지막줄에
+       Happy hacking!
+   - (2) 인텔리제이로 해당 프로젝트 열어서 인텔리제이 터미널창에 : npm i --save react react-dom typescript 하면 또 설치가 됨.
+   - (3) npm i --save-dev @types/react @types/react-dom @types/node 이거 또 깔아주는데 (확인)
    - 추가적으로 typescript를 사용하면서 필요한 라이브러리들을 설치해준다.
-   - tsconfig.json 파일은 맨 처음 프로젝트를 yarn start 명령어로 시작해보면 tsconfig.json 파일이 없다는 것을 알아채고 자동으로 만들어낸다.
-   - default 상태에서 "baseUrl":"./src" 코드만 추가하면, ./src를 절대경로로 갖겠다는 의미이다. 나중에 프로젝트가 커지면 경로지옥에 빠질수도 있기때문에 초기에 설정.그리고 아래 코드를 추가한다.
+   - (4) 이하 코드를 tsconfig.json에 설정해줘야하는데 tsconfig가 없을거임 . yarn start 해주면 자동으로 설치해준다는데 설치가 안되길래 tsc --init 해줬는데 에러났다
+         그래서 yarn add -D typescript 하고 인텔리제이 재시작했는데 yarn.lock 생기고 tsconfig 안생기는데 코딩애플 강사가 tsconfig.json 을 수동으로 당당하게 만들라고 포스팅한게 있었음.(루트폴더에)
+     - (이거확인좀) 그리고 아래 제이슨파일 복붙. 
+     - tsconfig.json 파일은 맨 처음 프로젝트를 yarn start 명령어로 시작해보면 tsconfig.json 파일이 없다는 것을 알아채고 자동으로 만들어낸다.
+     - default 상태에서 "baseUrl":"./src" 코드만 추가하면, ./src를 절대경로로 갖겠다는 의미이다. 나중에 프로젝트가 커지면 경로지옥에 빠질수도 있기때문에 초기에 설정.그리고 아래 코드를 추가한다.
+     - 1. target 은 typeScript file을 어떤 버전의 자바스크립트로 바꿔줄지 정하는 부분. es6로 정하면 es6버전 자바스크립트로 컴파일(변환)된다. 신버전원하면 esnext 해도 됨.
+     - 2. module 은 자바스크립트 파일 간의 import 문법을 구현할 때 어던 문법을 쓸지 정하는 곳.
+     - 3. commonjs 는 require 문법
+     - 4. noImplicitAny 는 any 라는 타입이 의도치 않게 발생할 경우 에러를 띄워주는 설정
+     - 5. strictNullChecks 는 null, undefined 타입에 이상한 조작을 하면 에러를 띄우는 설정 (4,5번은 일단 패스 ?)
+
 ```
 {
   "compilerOptions": {
@@ -102,19 +118,33 @@
    - eslint는 javaScript 코드에서 발견된 문제패턴을 식별하기 위한 정적코드분석도구. 코드의 질을 높이기 위한 도구
    - (vsCode에서는 extension 설치하는 곳에서 eslint 설치)
    - npm install -D eslint
-   - npx eslint --init
+   - npx eslint --init 이거 실행하면, 질문들이 시작됨.
+   - Ok to proceed? (y) => y하고 엔터
    - ```
      How would you like to use ESLint?
+        : Eslint를 어디에 사용할거니? > To check syntax and find problems
      What type of modules does your project use?
+        : 니 프로젝트에서 어떤 타입의 모듈을 사용할건데? > JavaScript modules (import/export)
      Which framework does your project use?
+        : 프레임워크는 뭐 쓸래? > React
      Does your project use TypeScript? (y/N)
+        : TS 사용하실? > yes
      Where does your code run? (Press space to select, a to toggle all, i to > invert selection)
+        : 코드 어디서 실행시킬거야? > Node
      What format do you want your config file to be in? (Use arrow keys)
+        : 파일 포맷 어떤걸로 할거? > JSON
      The config that you've selected requires the following dependencies:
      @typescript-eslint/eslint-plugin@latest @typescript-eslint/parser@latest
      Would you like to install them now with npm? (Y/n)
+        : 지금까지 설정한 내용을 바탕으로 npm으로 설치할거얌? > yes
+     Which package manager do you want to use? > yarn
      ```
-   - 네번째줄, 마지막줄은 중요. 타입스크립트 사용할거냐? Y, 여러플러그인들을 설치하겠냐? Y
+   - 인텔리제이 사용시 auto fix 설정하기 
+     - : Preferences > 검색에 eslint > Language 어쩌구 밑에 
+     - (1)두번째 select Automatic ESLint configuration 체크하고, 
+     - (2)Run for files: {**/*,*}.{js,ts,jsx,tsx,html,vue}, 
+     - (3)Run eslint 어쩌고에 체크하기.
+   - // 아래 설치는 다시 확인.(할필요 있는지)
    - npm i -D eslint-config-airbnb-base  //라액트관련규칙x
    - npm i -D eslint-config-airbnb    //리액트관련규칙o
    - npm i -D eslint-plugin-react eslint-plugin-react-hooks
@@ -125,7 +155,7 @@
      eslint-plugin-react-hooks : React Hooks 규칙이 들어있는 플러그인
      eslint-plugin-jsx-a11y : JSX요소의 접근성 규칙에 대한 정적검사 플러그인
      ```
-   - eslinttrc.json 파일에 코드 넣기
+   - eslintrc.json 파일에 코드 넣기 (이거이상함 확인.)
 ```
 module.exports = {
     parser: '@typescript-eslint/parser',
