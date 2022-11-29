@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="feat: chap14 Json">
-      <change afterPath="$PROJECT_DIR$/chap.17/251_debug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chap.18/259_functionClass.js" afterDir="false" />
+    <list default="true" id="711b7175-5678-4ce7-b31d-227002f1d4ac" name="Changes" comment="feat: chap17,18 debug,function,class,constructor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chap.15/244_localData.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.15/244_localData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task/unresolved.md" beforeDir="false" afterPath="$PROJECT_DIR$/task/unresolved.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chap.18/259_functionClass.js" beforeDir="false" afterPath="$PROJECT_DIR$/chap.18/259_functionClass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createProject_ETC/getStart.md" beforeDir="false" afterPath="$PROJECT_DIR$/createProject_ETC/getStart.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +106,8 @@
       <workItem from="1669376342009" duration="20463000" />
       <workItem from="1669450418762" duration="19127000" />
       <workItem from="1669530842715" duration="5032000" />
-      <workItem from="1669601217163" duration="19228000" />
+      <workItem from="1669601217163" duration="19302000" />
+      <workItem from="1669704923740" duration="6270000" />
     </task>
     <task id="LOCAL-00001" summary="add: terminal 내용추가">
       <created>1668847197254</created>
@@ -215,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669538046575</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: chap17,18 debug,function,class,constructor">
+      <created>1669645424014</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669645424014</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +253,8 @@
     <MESSAGE value="feat: chap7. event Run" />
     <MESSAGE value="feat: chap9.form" />
     <MESSAGE value="feat: chap14 Json" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: chap14 Json" />
+    <MESSAGE value="feat: chap17,18 debug,function,class,constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: chap17,18 debug,function,class,constructor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

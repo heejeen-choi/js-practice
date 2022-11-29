@@ -89,3 +89,6 @@ class MyClass {
         console.log(this.myField);
     }
 }
+
+
+
