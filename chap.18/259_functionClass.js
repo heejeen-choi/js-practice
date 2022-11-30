@@ -91,4 +91,68 @@ class MyClass {
 }
 
 
+//261.클래스 사용하기 (인스턴스화)
+//클래스를 인스턴스화하고 싶을때
+//생성한 클래스를 사용하고 싶을 때
+/**
+ * new 클래스명() : 클래스 인스턴스화
+ *
+ * class 선언으로 정의한 클래스를 실제 데이터로 사용하기 위해서는 new 연산자를 사용하며, 인스턴스화가 필요하다.
+ * 인스턴스화 한 데이터는 클래스 내 각 요소와 메소드에 접근 가능하다.
+ *
+ */
 
+class MyClass {
+    constructor() {
+        this.classField = 12
+    }
+    classMethod() {
+        console.log('메소드가 실행되었습니다.')
+    }
+}
+const myInstance = new MyClass();
+
+console.log(myInstance.classField);
+myInstance.classMethod();
+
+
+
+//262.클래스에서 변수 사용하기
+//클래스에서 변수 사용하고 싶을때
+//API 통신 결과 클래스를 생성하고 싶을때
+/**
+ * this.변수명 = 값 : 의미=멤버변수 정의
+ *
+ * 클래스에 속하는 변수를 클래스필드, 클래스변수, 멤버변수 라고 한다.
+ * 클래스에 멤버변수를 정의하기 위해서는 다음과 같이 constructor() 내부에 'this.변수명'을 사용한다.
+ * 여기서는 this라는건 클래스 자신을 가리킨다.
+ * 클래스 멤버변수에 let 과 const 를 사용하지 않도록 주의하자.
+ *
+ */
+class MyClass {
+    constructor() {
+        this.myField = 100;
+        this.myField1 = '사자';
+    }
+}
+//멤버변수는 초기값 대입이 가능하며, 대입하지 않으면 undefined로 정의된다.
+
+class MyClass {
+    constructor() {
+        // myField 에 초기값 '사자'를 대입
+        this.myField = '사자';
+    }
+}
+//인스턴스(new 클래스명())의 멤버변수 접근은 '인스턴스.멤버변수명'을 사용하며, 객체의 속성 접근방법과 같다.
+class MyClass {
+    constructor() {
+        this.myField1 = 100;
+        this.myField2 = '사자';
+    }
+}
+//인스턴스화
+const myInstance = new MyClass();
+console.log(myInstance.myField1);
+console.log(myInstance.myField2);
+
+//constructor()도 함수이므로 파라미터(매개변수)의 초기값을 지정할 수 있다.

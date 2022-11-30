@@ -1,3 +1,120 @@
+# 순서
+1. 터미널창에 프로젝트 만들고
+2. 인텔리제이로 프로젝트 오픈
+3. 인텔리제이 터미널 창에 : yarn create vite 프로젝트명 --template react-ts
+   (선택1 : React)
+   (선택2 : TypeScript)
+4. npm init
+   (쭉 엔터)
+   (Is this OK?(yes) _y)
+5. npm init @eslint/config
+   (To check syntax and problems)
+   (JavaScript modules (import/export))
+   (React)
+   (yes)
+   (Node)
+   (JavaScript)
+   (Would you like to install them now? _yes)
+   (yarn)
+6. 인텔리제이 Preference > eslint 검색 > Automatic~ 과 Run eslint --fix ~ 둘다체크
+7. vite.config.ts에 Error 떳으면 : npm i @vitejs/plugin-react
+8. vite.config.ts 에 추가
+````
+import {resolve} from 'path'
+// Error 뜨면, yarn add -D @types/node
+// Error 뜨면, yarn add -D vite
+
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'src/comp/index.ts'), // 빌드가 시작되는 파일을 명시
+      name: 'javascript_library',                     // 라이브러리 이름
+      // the proper extensions will be added
+      fileName: format => `index.${format}.js`        // 번들링된 최종 output 파일의 이름  
+    },
+    rollupOptions: {
+      // make sure to externalize deps that shouldn't be bundled
+      // into your library
+      external: ['react'],                            // 라이브러리에 React 모듈이 같이 번들링되면 안되기 때문에 명시 (같이 변들링 되면 라이브러리를 실행하는 쪽 React 전역 변수와 충돌 가능성)
+      output: {
+        // Provide global variables to use in the UMD build
+        // for externalized deps
+        globals: {
+          react: 'React'                              // 라이브러리에 React 모듈이 같이 번들링되면 안되기 때문에 명시 (SYNTAX =>  <<모듈 이름>> : <<변수 이름>> )      
+        }
+      }
+    }
+  }
+})
+````
+9. src/comp/index.ts 직접 생성     (: vite.config.ts 에 따른 entry 파일 생성하는 것)
+10. 라이브러리로 제공할 함수구현
+    (src/comp/index.ts && util && view 등 프로젝트 참조, import/export 제대로 되어야 다음 과정이 실행 됨)
+11. yarn build
+12. 루트에 dist 확인하면 type을 추론할 수 있는 *.d.ts 파일이 생성되지 않음
+    (d.ts 파일 자동 생성을 위한 tsconfig 설정)
+13. tsconfig.json 수정
+````
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+-    "noEmit": true,
++    "noEmit": false,                   // *.d.ts 파일 생성
+    "jsx": "react-jsx",
++    "declaration": true,               // *.d.ts 파일 생성
++    "declarationDir": "dist/@types",   // *.d.ts 파일 생성 위치
++    "emitDeclarationOnly": true        // *.d.ts 파일 생성
+  },
+  "include": [
+-    "src"
++    "src/comp"    // src/comp 하위의 모듈만 컴파일
+  ],
+  "references": [{ "path": "./tsconfig.node.json"}]
+}
+````
+14. typeScript 컴파일을 위해 ttypescript 모듈 추가 및 build 스크립트 수정
+    (pakage.json 수정한다)
+````
+{
+  "name": "javascript_library",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && ttsc -p ./tsconfig.json",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "typescript": "^4.6.4",
+    "ttypescript": "^1.5.13",
+    "vite": "^3.2.3"
+  }
+}
+````
+
+
+
 # javaScript 프로젝트 생성하기
 
 
